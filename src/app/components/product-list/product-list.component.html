@@ -1,1 +1,14 @@
-<p>product-list works!</p>
+
+<h2>Products list</h2>
+
+<div class="container">
+    <div class="card-columns">
+        <div class="card" *ngFor="let prod of productList">
+            <a [routerLink]="['/product/', prod.productId ]"><div class="card-header"> <strong>#</strong>{{ prod.productId }} {{ prod.name }} </div>
+            <div class="card-body"> {{ prod.description }} </div>
+            <div class="card-footer"><strong>$ {{ prod.price }} </strong> </div></a>
+        </div>
+    </div>    
+</div>
+
+

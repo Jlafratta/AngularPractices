@@ -1,7 +1,18 @@
-<h1> This is the Angular Router Application </h1>
 
-<a [routerLink]="['/list']">Go list</a>
-<br>
-<a [routerLink]="['/product/10']">Go product 10</a>
+<nav class="navbar navbar-expand-md bg-primary">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Menu</a>
+    <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/list']">Products</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <router-outlet></router-outlet>
