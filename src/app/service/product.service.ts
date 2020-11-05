@@ -7,17 +7,27 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ProductService {
 
-  private apiURL = 'https://utn-avanzada2-tp-final.herokuapp.com/api'
+  private apiURL = 'https://utn-avanzada2-tp-final.herokuapp.com/api/Product/'
 
   constructor(private http: HttpClient) { }
 
-  getById(id): Promise<any>{
-    return this.http.get(this.apiURL + '/Product/' + id)
+  getById(id: number): Promise<any>{
+    return this.http.get(this.apiURL + id)
       .toPromise();
   }
 
   getAll(): Promise<any>{
-    return this.http.get(this.apiURL + '/Product')
+    return this.http.get(this.apiURL)
+      .toPromise();
+  }
+
+  add(product: Product): Promise<any>{
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.http.post(this.apiURL, product, httpOptions)
       .toPromise();
   }
 

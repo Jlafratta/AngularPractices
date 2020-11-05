@@ -10,9 +10,9 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class ProductViewComponent implements OnInit {
 
-  constructor(private productService: ProductService,private route: ActivatedRoute) { }
-
   product: Product;
+
+  constructor(private productService: ProductService,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     let id = Number(this.route.snapshot.paramMap.get('id'));
