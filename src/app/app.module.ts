@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductViewComponent } from './components/product-view/product-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     SecondComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ProductListComponent,
+    ProductViewComponent
   ],
   imports: [
     BrowserModule,

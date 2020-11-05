@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
-import { FirstComponent } from './components/first/first.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { SecondComponent } from './components/second/second.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductViewComponent } from './components/product-view/product-view.component';
 
 const routes: Routes = [
-  { path: 'first', component: FirstComponent },
-  { path: 'second/:id', component: SecondComponent },
-  { path: '', redirectTo: '/first', pathMatch: 'full' },
+  { path: 'list', component: ProductListComponent },
+  { path: 'product/:id', component: ProductViewComponent },
+  { path: '', redirectTo: '/list', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ];
 
