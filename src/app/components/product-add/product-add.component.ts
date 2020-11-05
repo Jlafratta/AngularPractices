@@ -33,9 +33,7 @@ export class ProductAddComponent implements OnInit {
 
   addProduct(){
     let prod = new Product();
-    // prod.productCategoryId = this.productCategoryId;
-    // prod.productId = 0;
-    prod.productCategoryId = this.productCategoryId;
+    prod.productCategoryId = Number(this.productCategoryId);
     prod.name = this.name;
     prod.description = this.description;
     prod.price = this.price;
@@ -45,7 +43,7 @@ export class ProductAddComponent implements OnInit {
         this.msg = "Product successfully added";
       })
       .catch(error => {
-        alert(error);
+        alert("Service error: " + error.status);
       })
 
       
